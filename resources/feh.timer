@@ -1,0 +1,9 @@
+[Timer]
+# Time to wait after enable this unit
+OnActiveSec=60
+# Time between running each consecutive time
+OnUnitActiveSec=30
+Unit=feh.service
+
+[Install]
+WantedBy=multi-user.target
