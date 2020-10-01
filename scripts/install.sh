@@ -40,10 +40,12 @@ function bakup_cp(){
     echo "ln -s $src  $target"
     if [ -d $src ]; then
 
-        ln -s $src/ $target
+        ln -s $src $target
+        if [ -L $target/$(basename $target) ]; then
+            rm $target/$(basename $target)
+        fi
 
     elif [ -f $src ]; then
-        echo "--"
         ln -s $src $target
     fi
 
