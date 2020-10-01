@@ -4,54 +4,81 @@
 
 #
 
-bakup_dir="$HOME/.bakup-lixu"
+bakup_dir="$HOME.bakup-lixu"
 SHELL_FOLDER=$(dirname $(readlink -f "$0"))
 root="$(dirname $SHELL_FOLDER)"
 resources="$root/resources"
 installer='yay -S'
+dot_config="$HOME.config"
+systemd_user="$dot_config/systemd/user"
+if [ ! -d $dot_config ]; then
+    mkdir $dot_config
+fi
+
+if [ ! -d $systemd_user ]; then
+    mkdir -p $systemd_user
+
+fi
+
+if [ ! -d $bakup_dir ]; then
+    mkdir $bakup_dir
+fi
+
 function bakup_cp(){
     local target=$2
     local src=$1
-    if [ -d "$target" ]; then
-        local bk="$bakup_dir/$target"
-        if [ -d $(basename "$bakup_dir/$target") ]; then
+    if [ -e $target ] || [ -h $target ]; then
+        local name=$(basename $target)
+        local bk="$bakup_dir/$name"
+        if [ -e $bk ] || [ -h $bk ]; then
 
-            bk="$bakup_dir/$target-$(date "+%Y-%m-%d")"
+            bk="$bk-$(date "+%Y-%m-%d")"
         fi
-        echo "mv $target to $bk"
-
+        echo "mv $target  $bk"
+        mv $target $bk
     fi
-    echo "cp $src to $target"
+    echo "ln -s $src  $target"
+    ln -s $src $target
 }
 declare -A override_files
 override_files=(
-    [mirrorlist]="/etc/pacman.d/mirrorlist"
-    [pacman.conf]="/etc/pacman.conf"
-    [dot-xinitrc]="$HOME/.xinitrc"
-    [dot-xprofile]="$HOME/.xprofile"
-    [dot-pam_environment]="$HOME/.pam_environment"
+    [resources/mirrorlist]="/etc/pacman.d/mirrorlist"
+    [resources/pacman.conf]="/etc/pacman.conf"
+    [resources/dot-xinitrc]="$HOME.xinitrc"
+    [resources/dot-xprofile]="$HOME.xprofile"
+    [resources/dot-pam_environment]="$HOME.pam_environment"
+    [conky]="$HOME.config/conky"
+    [polybar]="$HOME.config/polybar"
+    [xmonad]="$HOME.xmonad"
+    [i3]="$HOME.config/i3"
+    [alacritty]="$HOME.config/alacritty"
+    [picom]="$dot_config/picom"
+    [wallpaper]="$dot_config/wallpaper"
+    [resources/feh.service]="$systemd_user/feh.service"
+    [resources/feh.timer]="$systemd_user/feh.timer"
 )
 function ovveride(){
     for src in ${!override_files[*]}
     do
         local target=${override_files[${src}]}
-        local abs_src="$resources/$src"
+        local abs_src="$root/$src"
         echo "ovveride: $abs_src -> $target"
         bakup_cp $abs_src $target
     done
 }
-echo "Begin ovveride some configs"
-ovveride
-echo "End ovveride"
-##########################
 
-pacman -S archlinxcn-keyring
-pacman -Syyu
-pacman -S yay
-# rm -rf /etc/pacman.d/gnupg
-# pacman-key --init
-# pacman-key --populate
-##########
+##########################
+function config_aur(){
+    sudo pacman -S archlinuxcn-keyring
+    sudo pacman -Syyu
+    sudo pacman -S yay
+    # rm -rf /etc/pacman.d/gnupg
+    # pacman-key --init
+    # pacman-key --populate
+    ##########
+    sudo chmod u+r /etc/pacman.conf
+    sudo chmod u+r /etc/pacman.d/mirrorlist
+}
 pkgs=(
     v2ray
     qv2ray
@@ -62,86 +89,100 @@ pkgs=(
     conky-cairo
     ranger
     proxychains
-    fcitx
+    fcitx5
     fcitx5-rime
     fcitx5-configtool
     fcitx5-gtk
     fcitx5-qt
-    fcitx5-qt4-git
     zsh
     sbt
 )
-
-for pkg in ${pkgs[@]}
-do
-    echo "$installer $pkg"
-done
+function install_common(){
+    for pkg in ${pkgs[@]}
+    do
+        echo ":> $installer $pkg"
+        $installer $pkg
+    done
+}
+# install_common
 #################################################
 # config wm
 #
 ##############################################
 
-
-read -p \
-$'use wm
+function config_wm(){
+    read -p \
+         $'use wm
 1)xmonad 2)i3
 default=all:>' wm
-echo "$wm---"
-if [ -z $wm ]; then
-    wm="all"
-fi
+    echo "$wm---"
+    if [ -z $wm ]; then
+        wm="all"
+    fi
 
-xmonad=(
-    xmonad
-    xmonad-contrib
-)
+    xmonad=(
+        xmonad
+        xmonad-contrib
+    )
 
-i3=(
-    i3-gaps
-    i3blocks
-    i3lock-fancy-git
-    i3status
-)
-wm_pkgs=(${xmonad[@]} ${i3[@]})
-if [ $wm = "all" ]; then
-    echo "select all"
-    for pkg in ${wm_pkgs[@]}
-    do
-        echo "$installer $pkg"
-    done
+    i3=(
+        i3-gaps
+        i3blocks
+        i3lock-fancy-git
+        i3status
+    )
+    wm_pkgs=(${xmonad[@]} ${i3[@]})
+    if [ $wm = "all" ]; then
+        echo "select all"
+        for pkg in ${wm_pkgs[@]}
+        do
+            echo "$installer $pkg"
+        done
 
 
-fi
+    fi
 
-if [ $wm = "1" ]; then
-    echo "select xmonad"
-fi
+    if [ $wm = "1" ]; then
+        echo "select xmonad"
+    fi
 
-if [ $wm = "2" ]; then
-    echo "select i3"
-fi
+    if [ $wm = "2" ]; then
+        echo "select i3"
+    fi
+}
+
 ################ end config wm ##########
 
 ################ config vmware ##########
+function config_vmware(){
+    vmware_pkgs=(
+        open-vm-tools
+        gtkmm3
+    )
 
-vmware_pkgs=(
-    open-vm-tools
-    gtkmm3
-)
+    read -p "config open vmware tools ?Y/n:" vmware
+    if [ -z $vmware ]; then
+        vmware="Y"
+    fi
 
-read -p "config open vmware tools ?Y/n:" vmware
-if [ -z $vmware ]; then
-    vmware="Y"
-fi
+    if [ $vmware = "Y" ]; then
 
-if [ $vmware = "Y" ]; then
+        echo "install packages"
+        for pkg in ${vmware_pkgs[@]}
+        do
+            echo "$installer $pkg"
+        done
+        ehco "enable systemd unit"
+        echo "systemctl enable vmtoolsd"
+        echo "systemctl enable "
+    fi
+}
 
-    echo "install packages"
-    for pkg in ${vmware_pkgs[@]}
-    do
-        echo "$installer $pkg"
-    done
-    ehco "enable systemd unit"
-    echo "systemctl enable vmtoolsd"
-    echo "systemctl enable "
-fi
+
+#########################################
+
+function config_zsh(){
+    bash $root/scripts/oh-my-zsh.sh
+}
+
+config_zsh

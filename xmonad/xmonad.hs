@@ -116,7 +116,7 @@ myLayout = id
              Full |||
              spiral (6/7)) |||
              noBorders (fullscreenFull Full)
-           
+
 ------------------------------------------------------------------------
 -- Colors and borders
 -- Currently based on the ir_black theme.
@@ -362,7 +362,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- By default, do nothing.
 myStartupHook = do
     spawn "fcitx"
-    spawn "feh --recursive --bg-fill --randomize /home/lixu/wallpaper"
+    spawn "feh --recursive --bg-fill --randomize $HOME.config/wallpaper"
     spawn "systemctl start --user feh.timer"
 --    spawn "picom --experimental-backend"
     spawn "picom -b"
