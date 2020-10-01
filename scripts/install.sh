@@ -38,7 +38,16 @@ function bakup_cp(){
         mv $target $bk
     fi
     echo "ln -s $src  $target"
-    ln -s $src $target
+    if [ -d $src ]; then
+
+        ln -s $src/ $target
+
+    elif [ -f $src ]; then
+        echo "--"
+        ln -s $src $target
+    fi
+
+    # mv $(dirname $target)/$(basename $src) $target
 }
 declare -A override_files
 override_files=(
@@ -53,11 +62,11 @@ override_files=(
     [i3]="$HOME.config/i3"
     [alacritty]="$HOME.config/alacritty"
     [picom]="$dot_config/picom"
-    [wallpaper]="$dot_config/wallpaper"
+    [resources/wallpaper]="$dot_config/wallpaper"
     [resources/feh.service]="$systemd_user/feh.service"
     [resources/feh.timer]="$systemd_user/feh.timer"
 )
-function ovveride(){
+function override(){
     for src in ${!override_files[*]}
     do
         local target=${override_files[${src}]}
@@ -184,5 +193,5 @@ function config_vmware(){
 function config_zsh(){
     bash $root/scripts/oh-my-zsh.sh
 }
-
-config_zsh
+override
+# config_zsh

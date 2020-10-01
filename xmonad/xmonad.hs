@@ -361,7 +361,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 --
 -- By default, do nothing.
 myStartupHook = do
-    spawn "fcitx"
+    spawn "fcitx5"
     spawn "feh --recursive --bg-fill --randomize $HOME.config/wallpaper"
     spawn "systemctl start --user feh.timer"
 --    spawn "picom --experimental-backend"
