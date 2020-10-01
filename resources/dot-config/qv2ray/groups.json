@@ -1,0 +1,110 @@
+{
+    "000000000000": {
+        "connections": [
+        ],
+        "creationDate": 1600580413,
+        "displayName": "Default Group",
+        "isSubscription": false,
+        "lastUpdatedDate": 1600580413,
+        "routeConfigId": "idxxfcbndtow",
+        "subscriptionOption": {
+            "ExcludeKeywords": [
+            ],
+            "ExcludeRelation": 0,
+            "IncludeKeywords": [
+            ],
+            "IncludeRelation": 1,
+            "address": "",
+            "updateInterval": 10
+        }
+    },
+    "gjdwpkjpjzou": {
+        "connections": [
+            "shpzmojzprnu",
+            "uziwnfndevzk",
+            "spsekzmvqjgw",
+            "cafzhrxvdhvy",
+            "ddqzvgezohzv",
+            "whuyczzaiker"
+        ],
+        "creationDate": 1600580555,
+        "displayName": "renzhe",
+        "isSubscription": true,
+        "lastUpdatedDate": 1600664970,
+        "routeConfigId": "wzrjvizvtgdy",
+        "subscriptionOption": {
+            "ExcludeKeywords": [
+            ],
+            "ExcludeRelation": 0,
+            "IncludeKeywords": [
+            ],
+            "IncludeRelation": 1,
+            "address": "https://renzhesub.com/link/6a5kuT39toM3lbsN?sub=3",
+            "updateInterval": 10
+        }
+    },
+    "oqyfcmdbpdhw": {
+        "connections": [
+            "jxghnnfpiflq",
+            "qmifcirihdaq",
+            "oovnkbnzmoik",
+            "zsgscjeslzrl",
+            "zmbcwviatxxr",
+            "iyzczizymhbn",
+            "potjiwglvwmj",
+            "zvayqhosswue",
+            "gspmiwmfqsjy",
+            "nfkvxhhreofy",
+            "xujxbbygqhus",
+            "mzzpjdbmgqgd",
+            "pgaxfkxtniaz",
+            "ltuqbrrkcrmv",
+            "hdzqpqzmkwui",
+            "vfgpylzesbvb",
+            "betklzabwyar",
+            "gphuhiguewbp",
+            "ypcucoegdliy",
+            "wpeqsagpjxrd",
+            "zxgirzmqslwd",
+            "ybntzccoxyer",
+            "drunlkwgmizz",
+            "mwldvzlvpryo",
+            "ebmxhrobzyal",
+            "bgygablsckop",
+            "birkhwdqszpo",
+            "rkehvumvzziv",
+            "ccgewxounnwh",
+            "rqladinpjite",
+            "lrvwqnhrsyez",
+            "jntezerhjpdy",
+            "xjinhueeuvbw",
+            "wmhjfeasaavn",
+            "rsqasyyckkhl",
+            "ewdhvqbqopfx",
+            "pwvrumivmdwk",
+            "dakpdvglfuys",
+            "zqczqhxkiyej",
+            "hhionqrjmmos",
+            "ixqmddsavyku",
+            "pvmvbkfqbpyg",
+            "pwigenyzriwd",
+            "gukcnqnykoon",
+            "pisxnigynjka"
+        ],
+        "creationDate": 1600667044,
+        "displayName": "renzhessr",
+        "isSubscription": true,
+        "lastUpdatedDate": 1600667130,
+        "routeConfigId": "qyelpuzgtgqz",
+        "subscriptionOption": {
+            "ExcludeKeywords": [
+            ],
+            "ExcludeRelation": 0,
+            "IncludeKeywords": [
+            ],
+            "IncludeRelation": 1,
+            "address": "https://renzhesub.com/link/6a5kuT39toM3lbsN?sub=1",
+            "updateInterval": 10
+        }
+    }
+}

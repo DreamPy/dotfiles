@@ -1,0 +1,25 @@
+{
+    "outbounds": [
+        {
+            "mux": {
+            },
+            "protocol": "shadowsocksr",
+            "sendThrough": "0.0.0.0",
+            "settings": {
+                "address": "ieplcm2.host-sub.com",
+                "group": "忍者云",
+                "method": "chacha20",
+                "obfs": "plain",
+                "obfs_param": "6832174232.microsoft.com",
+                "password": "renzhecloud",
+                "port": 1063,
+                "protocol": "auth_aes128_sha1",
+                "protocol_param": "74232:Nhe073",
+                "remarks": "*Ultimate|广港IEPL09|3.0|NF* - 1063 单端口"
+            },
+            "streamSettings": {
+            },
+            "tag": "outBound_PROXY"
+        }
+    ]
+}
