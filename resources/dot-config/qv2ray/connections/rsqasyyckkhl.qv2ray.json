@@ -15,7 +15,7 @@
                 "port": 1065,
                 "protocol": "auth_aes128_sha1",
                 "protocol_param": "74232:Nhe073",
-                "remarks": "Basic|R|香港1|1.5|NF* - 1065 单端口"
+                "remarks": "Basic|R|香港01|2.0|NF* - 1065 单端口"
             },
             "streamSettings": {
             },
