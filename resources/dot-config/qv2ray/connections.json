@@ -29,16 +29,6 @@
         "stats": [
         ]
     },
-    "betklzabwyar": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL11|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
     "bgygablsckop": {
         "creationDate": 1600667129,
         "displayName": "Advanced|R|美国02|3.0|NF* - 1105 单端口",
@@ -143,36 +133,6 @@
         "stats": [
         ]
     },
-    "ewdhvqbqopfx": {
-        "creationDate": 1600667130,
-        "displayName": "Basic|R|香港2|1.5|NF* - 1066 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667130,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "gphuhiguewbp": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL12|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "gspmiwmfqsjy": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL03|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
     "gukcnqnykoon": {
         "creationDate": 1600667130,
         "displayName": "Basic|香港05|1.0|NF* - 1063 单端口",
@@ -189,16 +149,6 @@
         "importSource": 1,
         "lastConnected": 0,
         "lastUpdatedDate": 1601604855,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "hdzqpqzmkwui": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL09|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
         "latency": 99998,
         "stats": [
         ]
@@ -243,16 +193,6 @@
         "stats": [
         ]
     },
-    "iyzczizymhbn": {
-        "creationDate": 1600667128,
-        "displayName": "*Ultimate|广日IEPL04|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667128,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
     "jjmbxuonwrwd": {
         "creationDate": 1601604855,
         "displayName": "*Ultimate|电信联通IEPL广港02|3.0|NF* - 1063 单端口",
@@ -263,43 +203,9 @@
         "stats": [
         ]
     },
-    "jntezerhjpdy": {
-        "creationDate": 1600667130,
-        "displayName": "Advanced|R|香港05|3.0|NF* - 1111 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667130,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "jxghnnfpiflq": {
-        "creationDate": 1600667128,
-        "displayName": "*Ultimate|广新IEPL01|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 1601024064,
-        "lastUpdatedDate": 1600667128,
-        "latency": 31,
-        "stats": [
-            {
-                "downLinkData": 491614527,
-                "upLinkData": 7812534
-            }
-        ]
-    },
     "lrvwqnhrsyez": {
         "creationDate": 1600667129,
         "displayName": "Advanced|R|香港04|3.0|NF* - 1110 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "ltuqbrrkcrmv": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL08|3.0|NF* - 1063 单端口",
         "importSource": 1,
         "lastConnected": 0,
         "lastUpdatedDate": 1600667129,
@@ -327,32 +233,12 @@
         "stats": [
         ]
     },
-    "mzzpjdbmgqgd": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL06|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
     "nagpsrrotijo": {
         "creationDate": 1601604855,
         "displayName": "*Ultimate|移动IEPL广港05|3.0|NF* - 1063 单端口",
         "importSource": 1,
         "lastConnected": 0,
         "lastUpdatedDate": 1601604855,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "nfkvxhhreofy": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL04|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
         "latency": 99998,
         "stats": [
         ]
@@ -367,42 +253,12 @@
         "stats": [
         ]
     },
-    "oovnkbnzmoik": {
-        "creationDate": 1600667128,
-        "displayName": "*Ultimate|广日IEPL01|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667128,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "pgaxfkxtniaz": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL07|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
     "pisxnigynjka": {
         "creationDate": 1600667130,
         "displayName": "Basic|香港06|1.0|NF* - 1063 单端口",
         "importSource": 1,
         "lastConnected": 0,
         "lastUpdatedDate": 1600667130,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "potjiwglvwmj": {
-        "creationDate": 1600667128,
-        "displayName": "*Ultimate|广港IEPL01|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667128,
         "latency": 99998,
         "stats": [
         ]
@@ -435,20 +291,6 @@
         "lastUpdatedDate": 1600667130,
         "latency": 99998,
         "stats": [
-        ]
-    },
-    "qmifcirihdaq": {
-        "creationDate": 1600667128,
-        "displayName": "*Ultimate|广新IEPL02|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 1601023962,
-        "lastUpdatedDate": 1600667128,
-        "latency": 41,
-        "stats": [
-            {
-                "downLinkData": 1461,
-                "upLinkData": 15305
-            }
         ]
     },
     "rkehvumvzziv": {
@@ -523,10 +365,14 @@
         "creationDate": 1601604855,
         "displayName": "*Ultimate|电信联通IEPL广新01|3.0|NF* - 1063 单端口",
         "importSource": 1,
-        "lastConnected": 0,
+        "lastConnected": 1601613836,
         "lastUpdatedDate": 1601604855,
-        "latency": 99998,
+        "latency": 34,
         "stats": [
+            {
+                "downLinkData": 124601937,
+                "upLinkData": 2348246
+            }
         ]
     },
     "tuvzlygnoobs": {
@@ -563,16 +409,6 @@
             }
         ]
     },
-    "vfgpylzesbvb": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL10|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
     "whuyczzaiker": {
         "creationDate": 1600580706,
         "displayName": "[V2]Basic|香港08|2.0|NF*",
@@ -593,16 +429,6 @@
         "importSource": 1,
         "lastConnected": 0,
         "lastUpdatedDate": 1600667130,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "wpeqsagpjxrd": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广韩IEPL01|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
         "latency": 99998,
         "stats": [
         ]
@@ -637,16 +463,6 @@
         "stats": [
         ]
     },
-    "xujxbbygqhus": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL05|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
     "ybntzccoxyer": {
         "creationDate": 1600667129,
         "displayName": "Advanced|R|新加坡02|3.0|NF* - 1101 单端口",
@@ -663,16 +479,6 @@
         "importSource": 1,
         "lastConnected": 0,
         "lastUpdatedDate": 1601604855,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "ypcucoegdliy": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL13|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
         "latency": 99998,
         "stats": [
         ]
@@ -697,42 +503,12 @@
         "stats": [
         ]
     },
-    "zmbcwviatxxr": {
-        "creationDate": 1600667128,
-        "displayName": "*Ultimate|广日IEPL03|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667128,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
     "zqczqhxkiyej": {
         "creationDate": 1600667130,
         "displayName": "Basic|台湾3|1.0|NF* - 1063 单端口",
         "importSource": 1,
         "lastConnected": 0,
         "lastUpdatedDate": 1600667130,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "zsgscjeslzrl": {
-        "creationDate": 1600667128,
-        "displayName": "*Ultimate|广日IEPL02|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667128,
-        "latency": 99998,
-        "stats": [
-        ]
-    },
-    "zvayqhosswue": {
-        "creationDate": 1600667129,
-        "displayName": "*Ultimate|广港IEPL02|3.0|NF* - 1063 单端口",
-        "importSource": 1,
-        "lastConnected": 0,
-        "lastUpdatedDate": 1600667129,
         "latency": 99998,
         "stats": [
         ]

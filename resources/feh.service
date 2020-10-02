@@ -3,5 +3,5 @@ Description=change bg by feh every 30s
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/feh --recursive --bg-fill --randomize $HOME.config/wallpaper
 
+ExecStart=/usr/bin/feh --recursive --bg-fill --randomize /home/lixu/.config/wallpaper
