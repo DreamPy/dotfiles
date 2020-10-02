@@ -4,12 +4,12 @@
 
 #
 
-bakup_dir="$HOME.bakup-lixu"
+bakup_dir="$HOME/.bakup-lixu"
 SHELL_FOLDER=$(dirname $(readlink -f "$0"))
 root="$(dirname $SHELL_FOLDER)"
 resources="$root/resources"
 installer='yay -S'
-dot_config="$HOME.config"
+dot_config="$HOME/.config"
 systemd_user="$dot_config/systemd/user"
 if [ ! -d $dot_config ]; then
     mkdir $dot_config
@@ -41,6 +41,9 @@ function bakup_cp(){
     if [ -d $src ]; then
 
         ln -s $src $target
+        if [ -L $target/$(basename $src) ]; then
+            rm $target/$(basename $src)
+        fi
         if [ -L $target/$(basename $target) ]; then
             rm $target/$(basename $target)
         fi
@@ -55,18 +58,20 @@ declare -A override_files
 override_files=(
     [resources/mirrorlist]="/etc/pacman.d/mirrorlist"
     [resources/pacman.conf]="/etc/pacman.conf"
-    [resources/dot-xinitrc]="$HOME.xinitrc"
-    [resources/dot-xprofile]="$HOME.xprofile"
-    [resources/dot-pam_environment]="$HOME.pam_environment"
-    [conky]="$HOME.config/conky"
-    [polybar]="$HOME.config/polybar"
-    [xmonad]="$HOME.xmonad"
-    [i3]="$HOME.config/i3"
-    [alacritty]="$HOME.config/alacritty"
+    [resources/dot-xinitrc]="$HOME/.xinitrc"
+    [resources/dot-xprofile]="$HOME/.xprofile"
+    [resources/dot-pam_environment]="$HOME/.pam_environment"
+    [conky]="$dot_config/conky"
+    [polybar]="dot_config/polybar"
+    [xmonad]="$HOME/.xmonad"
+    [i3]="$dot_config/i3"
+    [alacritty]="$dot_config/alacritty"
     [picom]="$dot_config/picom"
     [resources/wallpaper]="$dot_config/wallpaper"
     [resources/feh.service]="$systemd_user/feh.service"
+    [resources/emacs.service]="$systemd_user/emacs.service"
     [resources/feh.timer]="$systemd_user/feh.timer"
+    [rofi]="$dot_config/rofi"
 )
 function override(){
     for src in ${!override_files[*]}
@@ -194,6 +199,10 @@ function config_vmware(){
 
 function config_zsh(){
     bash $root/scripts/oh-my-zsh.sh
+}
+
+function config_fonts(){
+    $installer $(cat $root/scripts/fonts)
 }
 override
 # config_zsh
