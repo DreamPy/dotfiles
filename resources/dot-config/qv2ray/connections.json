@@ -365,13 +365,13 @@
         "creationDate": 1601604855,
         "displayName": "*Ultimate|电信联通IEPL广新01|3.0|NF* - 1063 单端口",
         "importSource": 1,
-        "lastConnected": 1601623513,
+        "lastConnected": 1601700450,
         "lastUpdatedDate": 1601604855,
-        "latency": 31,
+        "latency": 99999,
         "stats": [
             {
-                "downLinkData": 757484125,
-                "upLinkData": 4141691
+                "downLinkData": 760485059,
+                "upLinkData": 4540493
             }
         ]
     },

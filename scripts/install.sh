@@ -64,7 +64,7 @@ override_files=(
     [resources/dot-xprofile]="$HOME/.xprofile"
     [resources/dot-pam_environment]="$HOME/.pam_environment"
     [conky]="$dot_config/conky"
-    [polybar]="dot_config/polybar"
+    [polybar]="$dot_config/polybar"
     [xmonad]="$HOME/.xmonad"
     [i3]="$dot_config/i3"
     [alacritty]="$dot_config/alacritty"
@@ -115,6 +115,7 @@ pkgs=(
     fcitx5-qt
     zsh
     sbt
+    papirus-icon-theme
 )
 function install_common(){
     for pkg in ${pkgs[@]}
