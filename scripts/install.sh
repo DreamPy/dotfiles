@@ -75,6 +75,7 @@ override_files=(
     [resources/feh.timer]="$systemd_user/feh.timer"
     [rofi]="$dot_config/rofi"
     [resources/dot-config/qv2ray]="$dot_config/qv2ray"
+    [resources/emacsclient.desktop]="/usr/share/applications/emacsclient.desktop"
 )
 function override(){
     for src in ${!override_files[*]}
