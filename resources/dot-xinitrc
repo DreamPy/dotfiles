@@ -50,7 +50,7 @@ fi
 
 # exec i3
 # /usr/bin/xscreensaver -no-splash &
-conky -d -c $HOME.config/conky/conkyrc_orange_4k
+conky -d -c $HOME/.config/conky/conkyrc_orange_4k
 xsetroot -cursor_name left_ptr &
 exec xmonad
 # exec i3
