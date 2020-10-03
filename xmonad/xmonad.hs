@@ -43,7 +43,7 @@ myScreenshot = "screenshot"
 
 -- The command to use as a launcher, to launch commands that don't have
 -- preset keybindings.
-myLauncher = "rofi -show drun -theme onedark"
+myLauncher = "rofi -show drun -theme ~/.config/rofi/dracula/dracula.rasi"
 
 -- Location of your xmobar.hs / xmobarrc
 -- myXmobarrc = "~/.xmonad/xmobar-single.hs"
