@@ -43,8 +43,8 @@ myScreenshot = "screenshot"
 
 -- The command to use as a launcher, to launch commands that don't have
 -- preset keybindings.
-myLauncher = "rofi -show drun -theme ~/.config/rofi/dracula/dracula.rasi"
-
+myLauncher = "rofi -show drun  -theme-str 'element-icon { size: 1em;}' -theme  '~/.config/rofi/User Themes/merah.rasi'"
+myWindow = "rofi -show window  -theme-str 'element-icon { size: 1em;}' -theme  '~/.config/rofi/User Themes/merah.rasi'"
 -- Location of your xmobar.hs / xmobarrc
 -- myXmobarrc = "~/.xmonad/xmobar-single.hs"
 -- lixu use polybar
@@ -83,7 +83,6 @@ myManageHook = composeAll
     , className =? "Xchat"          --> doShift "5:media"
     , className =? "stalonetray"    --> doIgnore
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
-
 
 ------------------------------------------------------------------------
 -- Layouts
@@ -171,7 +170,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Use this to launch programs without a key binding.
   , ((modMask, xK_d),
      spawn myLauncher)
-
+  , ((modMask, xK_s),
+      spawn myWindow)
   -- Take a selective screenshot using the command specified by mySelectScreenshot.
   , ((modMask .|. shiftMask, xK_p),
      spawn mySelectScreenshot)
