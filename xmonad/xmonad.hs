@@ -370,7 +370,7 @@ myStartupHook = do
     spawn "bash /$HOME/.config/polybar/launch.sh "
     spawn "vmware-user"
     spawn "systemctl start --user emacs.service"
-    spawn "redshift -c $HOME/.config/redshift/redshift.conf"
+    spawn "bash $HOME/.config/redshift/launch.sh"
 ------------------------------------------------------------------------
 -- Run xmonad with all the defaults we set up.
 --
