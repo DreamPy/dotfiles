@@ -370,7 +370,7 @@ myStartupHook = do
     spawn "bash /$HOME/.config/polybar/launch.sh "
     spawn "vmware-user"
     spawn "systemctl start --user emacs.service"
-
+    spawn "redshift -c $HOME/.config/redshift/redshift.conf"
 ------------------------------------------------------------------------
 -- Run xmonad with all the defaults we set up.
 --
@@ -415,7 +415,8 @@ defaults = defaultConfig {
     modMask            = myModMask,
     workspaces         = myWorkspaces,
     normalBorderColor  = myNormalBorderColor,
-    focusedBorderColor = myFocusedBorderColor,
+
+focusedBorderColor = myFocusedBorderColor,
 
     -- key bindings
     keys               = myKeys,

@@ -76,6 +76,7 @@ override_files=(
     [rofi]="$dot_config/rofi"
     [resources/dot-config/qv2ray]="$dot_config/qv2ray"
     [resources/emacsclient.desktop]="/usr/share/applications/emacsclient.desktop"
+    [redshift]="$dot_config/redshift"
 )
 function override(){
     for src in ${!override_files[*]}
