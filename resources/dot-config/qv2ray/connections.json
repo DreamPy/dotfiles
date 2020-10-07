@@ -107,10 +107,14 @@
         "creationDate": 1601604855,
         "displayName": "*Ultimate|电信联通IEPL广新02|3.0|NF* - 1063 单端口",
         "importSource": 1,
-        "lastConnected": 1601724877,
+        "lastConnected": 1601946810,
         "lastUpdatedDate": 1601604855,
-        "latency": 99998,
+        "latency": 39,
         "stats": [
+            {
+                "downLinkData": 3323805,
+                "upLinkData": 733036
+            }
         ]
     },
     "drunlkwgmizz": {
@@ -365,13 +369,13 @@
         "creationDate": 1601604855,
         "displayName": "*Ultimate|电信联通IEPL广新01|3.0|NF* - 1063 单端口",
         "importSource": 1,
-        "lastConnected": 1601724905,
+        "lastConnected": 1601947864,
         "lastUpdatedDate": 1601604855,
-        "latency": 75,
+        "latency": 33,
         "stats": [
             {
-                "downLinkData": 772456207,
-                "upLinkData": 5381442
+                "downLinkData": 904957600,
+                "upLinkData": 10865210
             }
         ]
     },

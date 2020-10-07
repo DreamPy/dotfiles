@@ -44,7 +44,7 @@ myScreenshot = "screenshot"
 -- The command to use as a launcher, to launch commands that don't have
 -- preset keybindings.
 myLauncher = "rofi -show drun  -theme-str 'element-icon { size: 1em;}' -theme  '~/.config/rofi/User Themes/merah.rasi'"
-myWindow = "rofi -show window  -theme-str 'element-icon { size: 1em;}' -theme  '~/.config/rofi/User Themes/merah.rasi'"
+myWindow = "rofi -show window  -theme-str 'element-icon { size: 1em;}' -theme  '~/.config/rofi/User Themes/merah.rasi"
 -- Location of your xmobar.hs / xmobarrc
 -- myXmobarrc = "~/.xmonad/xmobar-single.hs"
 -- lixu use polybar
@@ -361,6 +361,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 --
 -- By default, do nothing.
 myStartupHook = do
+    spawn "conky -d -c $HOME/.config/conky/conkyrc_orange_4k"
     spawn "fcitx5"
     spawn "feh --recursive --bg-fill --randomize $HOME/.config/wallpaper"
     spawn "systemctl start --user feh.timer"
@@ -369,7 +370,6 @@ myStartupHook = do
     spawn "bash /$HOME/.config/polybar/launch.sh "
     spawn "vmware-user"
     spawn "systemctl start --user emacs.service"
-
 
 ------------------------------------------------------------------------
 -- Run xmonad with all the defaults we set up.

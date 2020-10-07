@@ -54,8 +54,8 @@ function bakup_cp(){
 
     # mv $(dirname $target)/$(basename $src) $target
 }
-sed -in "/ExecStart/d" $root/resources/feh.service
-echo "ExecStart=/usr/bin/feh --recursive --bg-fill --randomize $HOME/.config/wallpaper" >> $systemd_user/feh.service
+
+
 declare -A override_files
 override_files=(
     [resources/mirrorlist]="/etc/pacman.d/mirrorlist"
@@ -211,3 +211,5 @@ function config_fonts(){
 }
 override
 # config_zsh
+sed -in "/ExecStart/d" $root/resources/feh.service
+echo "ExecStart=/usr/bin/feh --recursive --bg-fill --randomize $HOME/.config/wallpaper" >> $systemd_user/feh.service
