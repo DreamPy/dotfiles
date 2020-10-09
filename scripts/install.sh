@@ -23,6 +23,12 @@ fi
 if [ ! -d $bakup_dir ]; then
     mkdir $bakup_dir
 fi
+if [ ! -d $HOME/.local/share/applications ]; then
+    mkdir -p $HOME/.local/share/applications
+fi
+if [ ! -d $HOME/.local/share/fonts ]; then
+    mkdir $HOME/.local/share/fonts
+fi
 
 function bakup_cp(){
     local target=$2
@@ -77,6 +83,7 @@ override_files=(
     [resources/dot-config/qv2ray]="$dot_config/qv2ray"
     [resources/emacsclient.desktop]="/usr/share/applications/emacsclient.desktop"
     [redshift]="$dot_config/redshift"
+    [resources/emacsclient.desktop]="$HOME/.local/share/applications/emacsclient.desktop"
 )
 function override(){
     for src in ${!override_files[*]}
