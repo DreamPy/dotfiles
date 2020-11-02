@@ -84,6 +84,7 @@ override_files=(
     [resources/emacsclient.desktop]="/usr/share/applications/emacsclient.desktop"
     [redshift]="$dot_config/redshift"
     [resources/emacsclient.desktop]="$HOME/.local/share/applications/emacsclient.desktop"
+    [resources/dot_zprofile]="$HOME/.zprofile"
 )
 function override(){
     for src in ${!override_files[*]}
@@ -124,6 +125,7 @@ pkgs=(
     fcitx5-qt
     zsh
     sbt
+    picom
     papirus-icon-theme
 )
 function install_common(){
@@ -217,7 +219,18 @@ function config_zsh(){
 function config_fonts(){
     $installer $(cat $root/scripts/fonts)
 }
-override
+##
+## auto login to v
+#
+# https://wiki.archlinux.org/index.php/Getty#Automatic_login_to_virtual_consoleoverride
+# systemctl edit getty@tty1
+# /etc/systemd/system/getty@tty1.service.d/override.conf
+# [Service]
+# ExecStart=
+# ExecStart=-/usr/bin/agetty --autologin username --noclear %I $TERM
 # config_zsh
 sed -in "/ExecStart/d" $root/resources/feh.service
 echo "ExecStart=/usr/bin/feh --recursive --bg-fill --randomize $HOME/.config/wallpaper" >> $systemd_user/feh.service
+install_common
+config_fonts
+config_zsh
