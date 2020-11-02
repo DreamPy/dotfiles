@@ -24,6 +24,8 @@ import qualified Data.Map        as M
 
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
+
+import XMonad.Actions.GridSelect
 ------------------------------------------------------------------------
 -- Terminal
 -- The preferred terminal program, which is used in a binding below and by
@@ -44,7 +46,7 @@ myScreenshot = "screenshot"
 -- The command to use as a launcher, to launch commands that don't have
 -- preset keybindings.
 myLauncher = "rofi -show drun  -theme-str 'element-icon { size: 1em;}' -theme  '~/.config/rofi/User Themes/merah.rasi'"
-myWindow = "rofi -show window  -theme-str 'element-icon { size: 1em;}' -theme  '~/.config/rofi/User Themes/merah.rasi"
+myWindow = "rofi -show window  -theme-str 'element-icon { size: 1em;}' -theme  '~/.config/rofi/User Themes/merah.rasi'"
 -- Location of your xmobar.hs / xmobarrc
 -- myXmobarrc = "~/.xmonad/xmobar-single.hs"
 -- lixu use polybar
@@ -288,7 +290,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Decrement the number of windows in the master area.
   , ((modMask, xK_period),
      sendMessage (IncMasterN (-1)))
-
+  -- activate gs
+  , ((modMask .|. shiftMask , xK_g), goToSelected defaultGSConfig)
+--  , ((modMask .|. shiftMask , xK_g), spwan myWindow)
   -- Toggle the status bar gap.
   -- TODO: update this binding with avoidStruts, ((modMask, xK_b),
 
